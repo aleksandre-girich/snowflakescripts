@@ -10,7 +10,7 @@ pipeline {
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
-                sh "schemachange -f migrations -a aleksandreg -u init_pass -r spokdeveloper -w SPOK_WH -d CORE_DWH -c CORE_DWH.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table"
+                sh "schemachange -f migrations -a hq72588.us-east-2.aws -u aleksandreg -r spokdeveloper -w SPOK_WH -d CORE_DWH -c CORE_DWH.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table"
             }
         }
     }
